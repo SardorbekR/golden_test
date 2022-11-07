@@ -8,9 +8,11 @@ void main() {
   testGoldens('Golden test', (WidgetTester tester) async {
     await loadAppFonts();
     // await _loadPageForGolden(tester);
+
     await multiScreenGolden(
       tester,
       "main",
+      customPump: (tester) => tester.pumpWidget(MyApp()),
       devices: [
         Device.iphone11,
         Device.phone.copyWith(name: "smallPhone"),
@@ -21,5 +23,7 @@ void main() {
         ),
       ],
     );
+    // await multiScreenGolden(find.byType(MyApp), matchesGoldenFile('main.png'));
+    // expect(find.text('0'), findsOneWidget);
   });
 }
