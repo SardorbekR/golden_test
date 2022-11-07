@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-const _kGoldenTestsThreshold = 0.02 / 100; // 0.02%
+const _kGoldenTestsThreshold = 1 / 100; // 1% tolerance
 
 Future<void> testExecutable(FutureOr<void> Function() testMain) async {
   if (goldenFileComparator is LocalFileComparator) {
