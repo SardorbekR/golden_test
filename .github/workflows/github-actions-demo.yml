@@ -17,7 +17,5 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Run integration tests
-  	uses: reactivecircus/android-emulator-runner@v1
-  	with:
-    	     api-level: 29
-    	     script: flutter test "Golden test" test/golden_widget_test.dart
+        uses: reactivecircus/android-emulator-runner@v1
+      - run: flutter test "Golden test" test/golden_widget_test.dart
