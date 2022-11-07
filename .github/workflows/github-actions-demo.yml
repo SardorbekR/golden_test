@@ -18,5 +18,3 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Run golden tests
       - run: flutter test "Golden test" test/golden_widget_test.dart
-      - name: Run integration tests
-        run: flutter test integration_test --verbose
