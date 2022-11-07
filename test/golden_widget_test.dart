@@ -8,6 +8,7 @@ void main() {
   testGoldens('Golden test', (WidgetTester tester) async {
     await loadAppFonts();
     // await _loadPageForGolden(tester);
+
     await multiScreenGolden(
       tester,
       "main",
