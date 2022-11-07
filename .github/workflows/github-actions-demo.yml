@@ -16,6 +16,5 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: flutter pub get
       - name: Run golden tests
         run: flutter test "Golden test" test/golden_widget_test.dart
